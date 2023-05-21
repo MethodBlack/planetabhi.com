@@ -1,6 +1,10 @@
 @import "@new-ui/foundations";
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap');
 
+:root {
+  --accent: hsl(35, 87%, 57%);
+}
+
 body {
  background: var(--background);    
  color: var(--text-primary);
@@ -69,7 +73,7 @@ header {
 }
 
 a {
-  color: var(--brown4);
+  color: var(--accent);
   text-decoration: none;
 }
 
