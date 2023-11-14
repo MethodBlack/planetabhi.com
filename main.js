@@ -35,7 +35,6 @@ document.querySelector('#app').innerHTML = `
       <h3 class="section-title">Social</h3>
           <ul class="links">
           <li><a href="https://github.com/planetabhi">GitHub</a></li>    
-          <li><a href="https://www.instagram.com/terriblecomposer/">Instagram</a></li> 
           <li><a href="https://www.linkedin.com/in/planetabhi/">LinkedIn</a></li>                         
           <li><a href="https://twitter.com/planetabhi">Twitter</a></li>
           <li><a href="https://www.youtube.com/@Terrible_">YouTube</a></li>
