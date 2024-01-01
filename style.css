@@ -1,5 +1,4 @@
 @import "@new-ui/foundations";
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap');
 
 :root {
   --accent: hsl(35, 87%, 57%);
@@ -53,7 +52,7 @@ header {
   padding-bottom: 104px;
 }
 
-.title {
+h1.title {
   font-weight: 400;
   color: var(--text-primary);
   font-size: 42px;
@@ -79,13 +78,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-}    
-
-p.label {
-  margin-bottom: 9px;
-  font-weight: 400;
-  font-style: italic;
-}
+}   
 
 @media (min-width: 600px) {
   .col-3 {

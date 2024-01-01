@@ -21,11 +21,11 @@ document.querySelector('#app').innerHTML = `
           <ul class="links">
           <li><a href="https://new-ui.com/">New UI</a> ✨</li>
           <li><a href="https://banksin.in/">Banks in India</a></li>
-          <li><a href="https://birdie.page/"><strike>Birdie</strike></a></li> 
+          <li><a href="https://birdie.page/"><strike>Birdie App</strike></a></li> 
           <li><a href="https://dimerapp.com/"><strike>Dimer App</strike></a></li>         
           <li><a href="https://remote-india.com/">Remote India</a></li> 
           <li><a href="https://riseofmachine.com/">Rise of Machine</a></li>  
-          <li><a href="https://saaslanding.page/"><strike>SaaS Landing Pages</strike></a></li>
+          <li><a href="https://saaslanding.page/">SaaS Landing</a></li>
           <li><a href="https://sargamcolors.com/">Sargam Colors</a></li> 
           <li><a href="https://sargam.design/">Sargam Design</a></li>                                              
           <li><a href="https://sargamicons.com/">Sargam Icons</a></li>
@@ -42,6 +42,10 @@ document.querySelector('#app').innerHTML = `
           <li><a href="https://twitter.com/planetabhi">Twitter</a></li>
           <li><a href="https://www.youtube.com/@Terrible_">YouTube</a></li>
         </ul>
+        <h3 class="section-title">Store</h3>
+        <ul class="links">
+        <li><a href="https://new-ui.com/templates/?ref=planetabhi.com">Templates</a></li>
+      </ul>
       </div>
       
       <div class="col-3">

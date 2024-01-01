@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.3.2"
+    "vite": "^5.0.10"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/MethodBlack/planetabhi.com#readme",
   "dependencies": {
-    "@new-ui/foundations": "^0.0.4"
+    "@new-ui/foundations": "^0.0.6"
   }
 }
