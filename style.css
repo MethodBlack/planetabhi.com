@@ -7,16 +7,16 @@
 body {
  background: var(--background);    
  color: var(--text-primary);
- font-size: 17px;
- line-height: 28px;
+ font-size: var(--desktop-body);
+ line-height: var(--lh-desktop-body);
  font-family: 'Libre Baskerville', serif;
  font-weight: 400;
  font-style: normal;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: var(--spacing-00);
+  padding: var(--spacing-00);
   box-sizing: border-box;
 }
 
@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  padding: 104px 20px;
+  padding: var(--spacing-16) var(--spacing-07);
 }
 
 .container {
@@ -53,22 +53,22 @@ header {
 }
 
 h1.title {
-  font-weight: 400;
   color: var(--text-primary);
-  font-size: 42px;
-  line-height: 52px;
+  font-size: var(--desktop-heading-01);
+  line-height: var(--lh-desktop-heading-01);
   font-weight: 700;
+  letter-spacing: var(--desktop-tracking-heading-01);
 }
 
 .section-title {
-  color: var(--text-secondary-alt);;
-  font-size: 13px;
+  color: var(--text-secondary-alt);
+  font-size: var(--desktop-caption);
+  line-height: var(--lh-desktop-caption);
   font-weight: 700;
   font-style: normal;
-  line-height: 16px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-bottom: 13px;
+  margin-bottom: var(--spacing-06);
 }
 
 a {
