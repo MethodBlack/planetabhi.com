@@ -45,7 +45,6 @@ document.querySelector('#app').innerHTML = `
         <h3 class="section-title">Store</h3>
         <ul class="links">
         <li><a href="https://newui.gumroad.com/">Gumroad</a></li>
-        <li><a href="https://newui.lemonsqueezy.com/">Lemon Squeezy</a></li>
         <li><a href="https://new-ui.com/templates/">New Templates</a> ✨</li>
       </ul>
       </div>
