@@ -41,7 +41,7 @@ document.querySelector('#app').innerHTML = `
           <li><a href="https://www.linkedin.com/in/planetabhi/">LinkedIn</a></li>
           <li><a href="https://soundcloud.com/terriblecomposer">SoundCloud</a></li>
           <li><a href="https://twitter.com/planetabhi">Twitter</a></li>
-          <li><a href="https://www.youtube.com/@Terrible_">YouTube</a></li>
+          <li><a href="https://www.youtube.com/@terrible_">YouTube</a></li>
         </ul>
         <h3 class="section-title">Store</h3>
         <ul class="links">
