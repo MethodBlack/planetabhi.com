@@ -38,7 +38,8 @@ document.querySelector('#app').innerHTML = `
           <ul class="links">
           <li><a href="https://dribbble.com/planetabhi">Dribbble</a></li>
           <li><a href="https://github.com/planetabhi">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/planetabhi/">LinkedIn</a></li>                         
+          <li><a href="https://www.linkedin.com/in/planetabhi/">LinkedIn</a></li>
+          <li><a href="https://soundcloud.com/terriblecomposer">SoundCloud</a></li>
           <li><a href="https://twitter.com/planetabhi">Twitter</a></li>
           <li><a href="https://www.youtube.com/@Terrible_">YouTube</a></li>
         </ul>
