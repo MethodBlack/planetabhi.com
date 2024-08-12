@@ -1,21 +1,31 @@
-@import "@new-ui/foundations";
+@import "@new-ui/reset";
+@import "@new-ui/spacings";
+@import "@new-ui/typography";
 
 :root {
-  --accent: hsl(35, 87%, 57%);
+  --bg: hsl(173, 17%, 48%);
+  --accent: hsl(72, 94%, 94%);
+  --breakout:	hsl(31, 100%, 13%);
 }
 
 * {
-  margin: var(--spacing-00);
-  padding: var(--spacing-00);
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: var(--background);    
-  color: var(--text-primary);
+  background: var(--bg);    
+  color: var(--accent);
   font-size: var(--desktop-body);
   line-height: var(--lh-desktop-body);
   font-family: 'Libre Baskerville', serif;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+  font-feature-settings: "liga", "dlig", "hlig";
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-style: normal;
  }
@@ -53,15 +63,15 @@ header {
 }
 
 h1.title {
-  color: var(--text-primary);
+  color: var(--accent);
   font-size: var(--desktop-heading-01);
   line-height: var(--lh-desktop-heading-01);
   font-weight: 700;
-  letter-spacing: var(--desktop-tracking-heading-01);
+  letter-spacing: -0.056em;
 }
 
 .section-title {
-  color: var(--text-secondary-alt);
+  color: var(--breakout);
   font-size: var(--desktop-caption);
   line-height: var(--lh-desktop-caption);
   font-weight: 700;
@@ -91,7 +101,6 @@ a:hover {
     width: 25%;
   }
 }
-
 
 #particles, #particles:after{
   width:1px;
