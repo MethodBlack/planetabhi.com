@@ -2,10 +2,43 @@
 @import "@new-ui/spacings";
 @import "@new-ui/typography";
 
+@font-face {
+  font-family: "regular";
+  src: url("/fonts/regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "regular";
+  src: url("/fonts/regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "bold";
+  src: url("/fonts/bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "bold";
+  src: url("/fonts/bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 :root {
   --bg: hsl(173, 17%, 48%);
   --accent: hsl(72, 94%, 94%);
   --breakout:	hsl(31, 100%, 13%);
+
+  --regular: "regular", var(--system-ui);
+  --bold: "bold", var(--system-ui);
 }
 
 * {
@@ -19,7 +52,7 @@ body {
   color: var(--accent);
   font-size: var(--desktop-body);
   line-height: var(--lh-desktop-body);
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--regular);
   font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
   font-feature-settings: "liga", "dlig", "hlig";
   font-variant-numeric: oldstyle-nums proportional-nums;
@@ -64,6 +97,7 @@ header {
 
 h1.title {
   color: var(--accent);
+  font-family: var(--bold);
   font-size: var(--desktop-heading-01);
   line-height: var(--lh-desktop-heading-01);
   font-weight: 700;
@@ -74,9 +108,10 @@ h1.title {
   color: var(--breakout);
   font-size: var(--desktop-caption);
   line-height: var(--lh-desktop-caption);
+  font-family: var(--bold);
   font-weight: 700;
   font-style: normal;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
   margin-bottom: var(--spacing-06);
 }
