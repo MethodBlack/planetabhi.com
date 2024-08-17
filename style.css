@@ -72,7 +72,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 56.25rem;
   margin: auto;
 }
 
@@ -83,16 +83,16 @@ body {
 
 .col-3 {
   width: 100%;
-  padding: 0 20px 0 0;
+  padding: 0 1.25rem 0 0;
 }
 
 ul.links {
   list-style: none;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 header {
-  padding-bottom: 104px;
+  padding-bottom: 6.5rem;
 }
 
 h1.title {
@@ -101,7 +101,7 @@ h1.title {
   font-size: var(--desktop-heading-01);
   line-height: var(--lh-desktop-heading-01);
   font-weight: 700;
-  letter-spacing: -0.056em;
+  letter-spacing: -0.05rem;
 }
 
 .section-title {
@@ -125,13 +125,13 @@ a:hover {
     text-decoration: underline;
 }   
 
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   .col-3 {
     width: 50%;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   .col-3 {
     width: 25%;
   }
