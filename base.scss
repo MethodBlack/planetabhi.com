@@ -125,6 +125,8 @@ ul.links {
 a {
   color: var(--accent);
   text-decoration: none;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
   
   &:hover {
     text-decoration: underline;
