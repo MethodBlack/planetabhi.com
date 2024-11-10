@@ -1,41 +1,25 @@
-@import "@new-ui/reset";
-@import "@new-ui/spacings";
-@import "@new-ui/typography";
+@use "@new-ui/reset";
+@use "@new-ui/spacings";
+@use "@new-ui/typography";
 
-@font-face {
-  font-family: "regular";
-  src: url("/fonts/regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "regular";
-  src: url("/fonts/regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "bold";
-  src: url("/fonts/bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "bold";
-  src: url("/fonts/bold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@mixin font-face($family, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url("/fonts/#{$family}.woff2") format("woff2"),
+         url("/fonts/#{$family}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
 }
 
+@include font-face("regular");
+@include font-face("bold", bold);
 
 :root {
-  --bg: hsl(173, 17%, 48%);
-  --accent: hsl(72, 94%, 94%);
-  --breakout:	hsl(31, 100%, 13%);
+  --bg: oklch(61.88% 0.0463 187.02);
+  --accent: oklch(98.54% 0.038 116.29);
+  --breakout:	oklch(29.01% 0.0667 61.93);
 
   --regular: "regular", var(--system-ui);
   --bold: "bold", var(--system-ui);
@@ -47,26 +31,40 @@
   box-sizing: border-box;
 }
 
+@mixin base-text {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+  font-feature-settings: "liga", "dlig", "hlig";
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin responsive($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
 body {
-  background: var(--bg);    
+  background: var(--bg);
   color: var(--accent);
   font-size: var(--desktop-body);
   line-height: var(--lh-desktop-body);
   font-family: var(--regular);
-  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
-  font-feature-settings: "liga", "dlig", "hlig";
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-style: normal;
- }
+  @include base-text;
+}
 
 .centered-container {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
   min-height: 100vh;
   padding: var(--spacing-16) var(--spacing-07);
 }
@@ -84,11 +82,14 @@ body {
 .col-3 {
   width: 100%;
   padding: 0 1.25rem 0 0;
-}
-
-ul.links {
-  list-style: none;
-  margin-bottom: 2.5rem;
+  
+  @include responsive(37.5rem) {
+    width: 50%;
+  }
+  
+  @include responsive(50rem) {
+    width: 25%;
+  }
 }
 
 header {
@@ -116,25 +117,24 @@ h1.title {
   margin-bottom: var(--spacing-06);
 }
 
+ul.links {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
-}
-
-a:hover {
+  
+  &:hover {
     text-decoration: underline;
-}   
-
-@media (min-width: 37.5rem) {
-  .col-3 {
-    width: 50%;
   }
 }
 
-@media (min-width: 50rem) {
-  .col-3 {
-    width: 25%;
-  }
+p {
+  margin-bottom: 2.5rem;
+  overflow-wrap: break-word;
+  text-justify: inter-word;
 }
 
 #particles, #particles:after{
